@@ -1,0 +1,10 @@
+<% posts.forEach((post)=>{ %> 
+    <div class="post-card">
+        <h1><%= post.title %></h1>
+        <p id="text"><%= post.description %></p>
+        <p>By <span id="name"><%= post.name %></span></p>
+        <div class="btn-row btn-container">
+            <a href="/post/show/<%= post._id %>" class="btn btn-primary">Show</a>
+        </div>
+    </div>
+<% }) %> 

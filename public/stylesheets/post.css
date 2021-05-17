@@ -1,0 +1,65 @@
+#title{
+    height: 3rem;
+    width:50rem;
+    font-size: 1.5rem;
+}
+
+#description{
+    height: 12rem;
+    width: 50rem;
+    font-size: 1.1rem;
+}
+
+.post-card{
+    height: 15rem;
+    width: 40rem;
+    background: white;
+    color: black;
+}
+
+.post-card *{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#text{
+    word-break: break-all;
+}
+
+#name{
+    color: blue;
+}
+
+.thumbnail {
+    width: 40rem;
+    display: block;
+    padding: 5px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.thumbnail *{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.add-comment{
+    margin-left: 70%;
+}
+
+.description{
+    text-transform:capitalize;
+    color: black;
+}
+
+.hide{
+    display: none;
+}
+
+.reply-container{
+    margin-left: 5rem;
+}

@@ -1,0 +1,11 @@
+<div>
+    <h1>New Comment</h1>
+    <form action="/<%= post._id %>/comment/add" method="POST">
+        <textarea id="description" name="text"></textarea>
+        <br>
+        <div class="comment-btn-row">
+            <button class="btn btn-primary" type="submit">Add Comment</button>
+            <a class="btn btn-danger" href="/post/show/<%= post._id %>">Cancel</a>
+        </div>
+    </form>
+</div>

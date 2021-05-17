@@ -1,0 +1,36 @@
+<div class="post-card">
+    <h1><%= post.title %></h1>
+    <p id="text"><%= post.description %></p>
+    <p>By <span id="name"><%= post.name %></span></p>
+    <div class="btn-row btn-container">
+        <a href="/post/edit/<%= post._id %>" class="btn btn-primary">Edit</a>
+        <form action="/post/delete/<%= post._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-danger" type="submit">Delete</button>
+        </form>
+    </div>
+</div>
+<div class="post-comment-container">
+    <div class="thumbnail">
+        <a  class="add-comment btn btn-primary" href="/<%= post._id  %>/comment/add">Add a Comment</a>
+        <% post.comments.forEach((comment)=>{ %> 
+            <div>
+                <p class="description" id="text"><%= comment.text %></p>
+                <div class="btn-row btn-container">
+                    <a href="/<%= post._id %>/comment/<%= comment.id %>/edit" class="btn btn-primary">Edit</a>
+                    <form class="form" action="/<%= post.id %>/comment/<%= comment.id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger" type="submit">Delete</button>
+                    </form>
+                    <a href="/<%= post._id %>/comment/<%= comment._id %>/add" class="btn btn-primary">Reply</a>
+                    <% if(comment.comments.length>0){ %>
+                        <button  class="btn btn-primary reply"><span id="status">View</span> <%= comment.comments.length %> reply</button>
+                    <% } %>     
+                </div>
+                <div class="reply-container hide">
+                    <% comment.comments.forEach((c)=>{ %> 
+                        <p class="description" id="text"><%= c.text %></p>
+                    <% }) %> 
+                </div>
+            </div>
+        <% }) %> 
+    </div> 
+</div>

@@ -1,0 +1,11 @@
+<div>
+    <h1>Edit Comment</h1>
+    <form action="/<%= post.id %>/comment/<%= comment._id %>/edit?_method=PUT" method="POST">
+        <textarea id="description" name="text"><%= comment.text %></textarea>
+        <br>
+        <div class="comment-btn-row">
+            <button class="btn btn-primary" type="submit">Edit Comment</button>
+            <a class="btn btn-danger" href="/post/show/<%= post._id %>">Cancel</a>
+        </div>
+    </form>
+</div>
