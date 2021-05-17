@@ -35,6 +35,6 @@ app.use('/post',postRouter)
 app.use('/:id/comment',commentRouter)
 
 app.get('*',(req,res)=>{
-    res.render('Error 404 page not found')
+    res.send('Error 404 page not found')
 })
 app.listen(process.env.PORT || 3123)
