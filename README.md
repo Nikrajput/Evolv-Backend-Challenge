@@ -25,23 +25,23 @@ Uses internal memory for storing the (windowed) working set, enabling faster acc
 show all blog -> GET /
 
 # about blog
-adding a post -> GET /post/add
-adding a post -> POST /post/add
-show a single post -> GET /post/show/:id
-editing a post -> GET /post/edit/:id
-editing a post -> PUT /post/edit/:id
+adding a post -> GET /post/add_
+adding a post -> POST /post/add_
+show a single post -> GET /post/show/:id_
+editing a post -> GET /post/edit/:id_
+editing a post -> PUT /post/edit/:id_
 deleting a post -> DELETE /post/delete/:id
 
 # about comment on a blog
 
-adding a comment -> GET /:id/comment/add
-adding a comment -> POST /:id/comment/add
-editing a comment -> GET /:id/comment/:c_id/edit
-editing a comment -> PUT /:id/comment/:c_id/edit
+adding a comment -> GET /:id/comment/add_
+adding a comment -> POST /:id/comment/add_
+editing a comment -> GET /:id/comment/:c_id/edit_
+editing a comment -> PUT /:id/comment/:c_id/edit_
 deleting a comment -> DELETE /:id/comment/:c_id
 
 
 # about comment on a comment
 
-adding a comment -> GET /:id/comment/:c_id/add
+adding a comment -> GET /:id/comment/:c_id/add_
 adding a comment -> POST /:id/comment/:c_id/add
